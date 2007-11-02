@@ -6,7 +6,8 @@
  Calculate the grades of a class of students, given raw scores on exam
 }
 \usage{
-do.grades(ggrades, divs = NULL, cut = 0, tit = "Exam Grades")
+do.grades(ggrades, divs = NULL, cut = 0, tit = "Exam Grades",
+breaks=length(ggrades)/3, ...)
 }
 
 \arguments{
@@ -14,6 +15,8 @@ do.grades(ggrades, divs = NULL, cut = 0, tit = "Exam Grades")
   \item{divs}{divisions for grades (optional)}
   \item{cut}{low end Cut off to remove 0 from statistics }
   \item{tit}{Title for Figure}
+  \item{breaks}{breaks for the histogram, default=length(ggrades)/3}
+  \item{\dots}{other parameters for hist}
 }
 \details{
   To remove students who do not take the test a low end cut off

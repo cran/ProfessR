@@ -1,4 +1,4 @@
-This is pdfeTeX, Version 3.141592-1.21a-2.2 (Web2C 7.5.4) (format=pdflatex 2007.9.27)  4 NOV 2007 12:00
+This is pdfeTeX, Version 3.141592-1.21a-2.2 (Web2C 7.5.4) (format=pdflatex 2007.9.27)  16 FEB 2008 07:16
 entering extended mode
 **Grader.tex
 (./Grader.tex
@@ -145,8 +145,30 @@ Style option: `fancyvrb' v2.6, with DG/SPQR fixes <1998/07/17> (tvz)
 \FV@StepNumber=\count102
 \FV@OutFile=\write3
 
-No file fancyvrb.cfg.
-) (/usr/local/lib64/R/share/texmf/upquote.sty
+(/usr/share/texmf/tex/latex/fancyvrb/fancyvrb.cfg
+File: fancyvrb.rc 1997/01/11 FMi fancyvrb customization by Sebastian Rahtz and 
+Frank Mittelbach for LaTeX Graphics Companion
+
+(/usr/share/texmf/tex/latex/tools/calc.sty
+Package: calc 1998/07/07 v4.1b Infix arithmetic (KKT,FJ)
+\calc@Acount=\count103
+\calc@Bcount=\count104
+\calc@Adimen=\dimen117
+\calc@Bdimen=\dimen118
+\calc@Askip=\skip46
+\calc@Bskip=\skip47
+LaTeX Info: Redefining \setlength on input line 59.
+LaTeX Info: Redefining \addtolength on input line 60.
+\calc@denominator=\count105
+)
+\ExampleWidth=\dimen119
+\CodeWidth=\dimen120
+\c@chapter=\count106
+\c@EX@ct=\count107
+\c@side@count=\count108
+\@display=\box29
+))
+(/usr/local/lib64/R/share/texmf/upquote.sty
 Package: upquote 2003/08/11 v1.1 Covington's upright-quote modification to verb
 atim and verb
 
@@ -264,35 +286,35 @@ LaTeX Font Info:    ... okay on input line 20.
 (/usr/share/texmf/tex/context/base/supp-pdf.tex
 (/usr/share/texmf/tex/context/base/supp-mis.tex
 loading : Context Support Macros / Miscellaneous (2004.10.26)
-\protectiondepth=\count103
-\scratchcounter=\count104
+\protectiondepth=\count109
+\scratchcounter=\count110
 \scratchtoks=\toks21
-\scratchdimen=\dimen117
-\scratchskip=\skip46
+\scratchdimen=\dimen121
+\scratchskip=\skip48
 \scratchmuskip=\muskip11
-\scratchbox=\box29
+\scratchbox=\box30
 \scratchread=\read2
 \scratchwrite=\write4
-\zeropoint=\dimen118
-\onepoint=\dimen119
-\onebasepoint=\dimen120
-\minusone=\count105
-\thousandpoint=\dimen121
-\onerealpoint=\dimen122
+\zeropoint=\dimen122
+\onepoint=\dimen123
+\onebasepoint=\dimen124
+\minusone=\count111
+\thousandpoint=\dimen125
+\onerealpoint=\dimen126
 \emptytoks=\toks22
-\nextbox=\box30
-\nextdepth=\dimen123
+\nextbox=\box31
+\nextdepth=\dimen127
 \everyline=\toks23
-\!!counta=\count106
-\!!countb=\count107
-\recursecounter=\count108
+\!!counta=\count112
+\!!countb=\count113
+\recursecounter=\count114
 )
 loading : Context Support Macros / PDF (2004.03.26)
-\nofMPsegments=\count109
-\nofMParguments=\count110
-\MPscratchCnt=\count111
-\MPscratchDim=\dimen124
-\MPnumerator=\count112
+\nofMPsegments=\count115
+\nofMParguments=\count116
+\MPscratchCnt=\count117
+\MPscratchDim=\dimen128
+\MPnumerator=\count118
 \everyMPtoPDFconversion=\toks24
 )
 LaTeX Font Info:    Try loading font information for U+msa on input line 56.
@@ -316,10 +338,10 @@ File: grades-004.pdf Graphic file (type pdf)
 
 <use grades-004.pdf> [3] [4 <./grades-004.pdf>] (./Grader.aux) ) 
 Here is how much of TeX's memory you used:
- 3036 strings out of 94500
- 37575 string characters out of 1176766
- 81471 words of memory out of 1000000
- 6133 multiletter control sequences out of 10000+50000
+ 3242 strings out of 94500
+ 40161 string characters out of 1176766
+ 85184 words of memory out of 1000000
+ 6333 multiletter control sequences out of 10000+50000
  28913 words of font info for 70 fonts, out of 500000 for 2000
  580 hyphenation exceptions out of 1000
  35i,6n,24p,242b,288s stack positions out of 1500i,500n,5000p,200000b,5000s
@@ -334,4 +356,4 @@ f/fonts/type1/bluesky/cm/cmbx12.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cm
 r9.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmbx9.pfb></usr/share/texmf/fon
 ts/type1/bluesky/cm/cmr12.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr17.pf
 b>
-Output written on Grader.pdf (4 pages, 83728 bytes).
+Output written on Grader.pdf (4 pages, 87515 bytes).

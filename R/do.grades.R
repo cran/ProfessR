@@ -1,26 +1,26 @@
 `do.grades` <-
-function(ggrades, divs=NULL, cut=0, tit="Exam Grades")
+function(ggrades, divs=NULL, cut=0, tit="Exam Grades", breaks=length(ggrades)/3, ...)
 {
   if(missing(divs)) { divs=NULL }
   if(missing(cut)) { cut=NULL }
   if(missing(tit)) { tit = "Exam Grades" }
-
+  if(missing(breaks)) { breaks=length(ggrades)/3 }
 
   if(!is.null(cut))
     {
       agrades = ggrades[ggrades>cut]
-
     }
   else
     {
-
       agrades = ggrades
-
     }
   
   BIGN = length(ggrades)
   
-  HA = hist(agrades, breaks=BIGN/3, main=tit, xlab="Scores")
+  HA = hist(agrades,  main=tit, xlab="Scores", breaks=breaks, ...)
+   axis(1, at=seq(from=10*round(min(agrades[agrades>0])/10), to=max(agrades), by=10), labels=TRUE)
+   axis(1, at=seq(from=10*round(min(agrades[agrades>0])/10), to=max(agrades), by=2), labels=FALSE)
+
   m = mean(agrades)
   s = sqrt(var(agrades))
 
@@ -34,58 +34,56 @@ function(ggrades, divs=NULL, cut=0, tit="Exam Grades")
   
   u = par("usr")
 ###	print(u)
-if(is.null(divs))
-{	
-  text( c(20, (m-2*s+m-s)/2,(m-s+ m)/2, (m+m+s)/2, (m+s+m+2*s)/2 ), rep(u[4], 5),
-       labels=c("E", "D", "C", "B", "A"), pos=1 , col=rgb(1, .7, .7)  )
-}
+  if(is.null(divs))
+    {	
+      text( c(20, (m-2*s+m-s)/2,(m-s+ m)/2, (m+m+s)/2, (m+s+m+2*s)/2 ), rep(u[4], 5),
+           labels=c("E", "D", "C", "B", "A"), pos=1 , col=rgb(1, .7, .7)  )
+    }
   box()
   if(is.null(divs))
     {
       mtext(text="Click 4 divisions from LOW to HIGH", side=3, at = u[1], line=2, adj=0)
       K = locator(type='p', col=4, n=4)
       abline(v=K$x, col=4)
-      divs = c(min(ggrades), K$x, max(ggrades))
+      divs =  c(min(ggrades), K$x, max(ggrades))
     }
 
-abline(v=divs[2:(length(divs)-1)], col=rgb(0,0,1) )	
-
-ddivs = diff(divs)
-xgrad = divs[1:(length(divs)-1)] + ddivs/2
-
-
-	xmin = HA$breaks[1]+(divs[2]-HA$breaks[1])/2
-     	xgrad[1]= xmin
-	text(xgrad , rep(u[4], 5), labels=c("E", "D", "C", "B", "A"), pos=1   )
-
-  
-
- 
- ##### print(divs) 
   divs = sort(divs)
 
- cat("Grade divisions:", sep="\n")
+  abline(v=divs[2:(length(divs)-1)], col=rgb(0,0,1) )	
+
+  ddivs = diff(divs)
+  xgrad = divs[1:(length(divs)-1)] + ddivs/2
+
+  xmin = HA$breaks[1]+(divs[2]-HA$breaks[1])/2
+  xgrad[1]= xmin
+  text(xgrad , rep(u[4], 5), labels=c("E", "D", "C", "B", "A"), pos=1   )
+  
+##### print(divs) 
+  divs = sort(divs)
+
+  cat("Grade divisions:", sep="\n")
   cat(divs, sep="\n")
 
 #####  divisions are determined, now allocate grades.
 ###  this can be run independent of the divs determination
 
-KAPPA = getlet(ggrades, divs)	
+  KAPPA = getlet(ggrades, divs)	
 ###ggrades, lett=letts, scor=scores, divs=divs, LETS=LETS, SCRS=SCRS
-LETS = KAPPA$LETS
-letts = KAPPA$lett
-scores = KAPPA$scor	
-SCRS = KAPPA$SCRS
- cat("Letter Grade Distribution:", sep="\n")
+  LETS = KAPPA$LETS
+  letts = KAPPA$lett
+  scores = KAPPA$scor	
+  SCRS = KAPPA$SCRS
+  cat("Letter Grade Distribution:", sep="\n")
   for(i in 1:length(LETS))
     {
       cat(paste(sep=' ', i, LETS[i], length(letts[letts==LETS[i]])), sep="\n")
     }
 
- cat("Numeric Grade Distribution:", sep="\n")
+  cat("Numeric Grade Distribution:", sep="\n")
   for(i in 1:length(SCRS))
     {
-       cat(paste(sep=' ', i, SCRS[i], length(scores[scores==SCRS[i]])), sep="\n")
+      cat(paste(sep=' ', i, SCRS[i], length(scores[scores==SCRS[i]])), sep="\n")
     }
   print(paste(sep=' ', "Mean Score=",mean(scores)))
 

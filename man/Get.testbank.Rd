@@ -44,6 +44,15 @@ e\) It is impossible to estimate conditions at that time.
 \dontrun{
 fn = "MY.questions"
 Qbank = Get.testbank(fn)
+
+##########  use existing database:
+data(QBANK1)
+#####  dump out question bank in correct format:
+DUMPbank("my.questions", QBANK1, sep = "\n")
+###  read it in:
+QB1=Get.testbank("my.questions")
+
+
 }
 
 }
