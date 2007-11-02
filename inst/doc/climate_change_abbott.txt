@@ -1,0 +1,173 @@
+QUESTION: The fraction of solar energy reflected back to space due to Earth's cloudiness or snow and ice cover is known as \makebox[1cm]{\Rivpt\hrulefill\Rivpt}.
+a) libido
+ANSWER: b) albedo
+c) segundo
+d) La Nina
+
+QUESTION: When short-wavelength radiation from the Sun passes through a planet's atmosphere but long-wavelength reradiation is trapped, the resulting conditions produce \makebox[1cm]{\Rivpt\hrulefill\Rivpt}.
+a) global cooling
+b) a Bose-Einstein condensate
+ANSWER: c) the greenhouse effect 
+d) all of the above
+
+QUESTION: The greenhouse effect results in \makebox[1cm]{\Rivpt\hrulefill\Rivpt}.
+a) global cooling
+ANSWER: b) global warming
+c) lots of flowers
+d) the growth of green algae on the shady side of houses worldwide
+
+QUESTION: Surface temperatures on Venus are \makebox[1cm]{\Rivpt\hrulefill\Rivpt} those on the surface of Earth.
+a) much lower than
+b) a little bit lower, on average, than
+c) about the same as
+d) a little bit higher, on average, than
+ANSWER: e) much higher than
+
+QUESTION: Limestone is rock composed of \makebox[1cm]{\Rivpt\hrulefill\Rivpt}. 
+a) SiO\ensuremath{_2}
+b) FeCO\ensuremath{_3}
+ANSWER: c) CaCO\ensuremath{_3}
+d) a mixture of SiO\ensuremath{_2} and FeCO\ensuremath{_3}
+
+QUESTION: Glass is opaque to \makebox[1cm]{\Rivpt\hrulefill\Rivpt} radiation.
+ANSWER: a) long-wavelength
+b) short-wavelength
+c) both short- and long-wavelength 
+d) neither short- nor long-wavelength
+e) You can see through glass, so it is transparent to all radiation.
+
+QUESTION: Greenhouse gases include \makebox[1cm]{\Rivpt\hrulefill\Rivpt}.
+a) CO\ensuremath{_2}
+b) H\ensuremath{_2}O vapor
+c) methane (CH4)
+d) chlorofluorocarbons
+ANSWER: e) all of these
+
+QUESTION: Warm climates in the geologic past are indicated by \makebox[1cm]{\Rivpt\hrulefill\Rivpt}.
+a) fossil reefs and most limestones; 
+b) the aluminum ore bauxite;
+c) beds of evaporite minerals (e.g., halite); 
+ANSWER: d) all of these
+e) none of these
+
+QUESTION: What was the world like during the Late Paleocene Torrid Age? 
+ANSWER: a) Most of the world was wetter and warmer.
+b) Most of the world was drier and warmer.
+c) Most of the world was wetter, but a little cooler.
+d) Most of the world was a desert.
+e) It is impossible to estimate conditions at that time.
+
+QUESTION: About 14,000 years ago, the Earth began to warm according to changes seen in annual ice layers in glaciers: the O18, CO\ensuremath{_2}, and methane content in ice \makebox[1cm]{\Rivpt\hrulefill\Rivpt}.
+a) decreased
+ANSWER: b) increased
+c) stayed the same despite orbital changes that brought warming
+
+QUESTION: The Older Dryas and Younger Dryas stages represented \makebox[1cm]{\Rivpt\hrulefill\Rivpt}.
+ANSWER: a) two cooling stages during warmup from the last major glacial advance
+b) two of the more abrupt warming stages during the last glaciation
+c) one warming stage and one cooling stage during the last glaciation
+d) periods of dry climate 
+
+QUESTION: Over the last 7000 years there has been a \makebox[1cm]{\Rivpt\hrulefill\Rivpt}.
+ANSWER: a) lowering of global average temperature totaling 2\ensuremath{^\circ}C
+b) raising of global average temperature totaling 2\ensuremath{^\circ}C
+c) constant global temperature, on average 
+d) None of these are correct.
+
+QUESTION: The Little Ice Age that affected Europe from about \makebox[1cm]{\Rivpt\hrulefill\Rivpt} lowered average annual temperature by only about 1\ensuremath{^\circ}C but was enough to reduce crop yields, cause mountain glaciers to advance, and produce winters much more severe than in the twentieth century.
+ANSWER: a) 1450 to 1850 C.E.
+b) 100 to 800 C.E.
+c) 1700 to 1900 C.E.
+d) 800 to 1450 C.E.
+e) 1450 to 1850 B.C.E.
+
+QUESTION: The major factors in glacial periods lasting tens of millions of years appear to be \makebox[1cm]{\Rivpt\hrulefill\Rivpt}.
+a) having one or more large continental masses near the poles. 
+b) oceanic circulation that is more longitudinal (north-south) than latitudinal (east-west). 
+c) oceanic circulation that is more latitudinal (east-west) than longitudinal (north-south). 
+ANSWER: d) Both a and b are correct.
+e) Both a and c are correct.
+
+QUESTION: The climatic cooling of the last 55.5 million years has been caused by \makebox[1cm]{\Rivpt\hrulefill\Rivpt}.
+a) the ongoing breakup of Pangaea into separate continents  
+b) continental masses moving into polar latitudes
+c) snow and ice accumulating on polar landmasses, increasing albedo. 
+d) the uplifts of the Tibetan Plateau/Himalaya Mountains in Asia and the Colorado Plateau in the western United States deflecting west-to-east atmospheric circulation in the midlatitudes.
+ANSWER: e) all of these
+
+QUESTION: The cycles of slow buildup and advance of glaciers followed by rapid shrinkage and retreat is caused by \makebox[1cm]{\Rivpt\hrulefill\Rivpt}.
+a) Eccentricity of the Earth's orbit around the Sun 
+b) Tilt of the Earth's axis
+c) Precession of the equinoxes 
+ANSWER: d) all of these
+e) none of these
+
+QUESTION: A strong El Nino is characterized by \makebox[1cm]{\Rivpt\hrulefill\Rivpt}.
+a) the arrival of warm ocean water to Peru and Ecuador near Christmastime
+b) high atmospheric pressure over the eastern Pacific Ocean resulting in trade winds that blow toward the equator from the north and south
+c) a southern jet stream branch that flows eastward bringing higher rainfall to the southeastern United States and helping break apart Atlantic and Caribbean storms resulting in fewer hurricanes
+d) heavy rainstorms in the western United States
+ANSWER: e) all of these
+
+QUESTION: The eruption of \makebox[1cm]{\Rivpt\hrulefill\Rivpt} has been called the greatest eruption in historic times, killing about 10,000 people outright by pyroclastic flows and another 107,000 indirectly through famine and disease. 
+ANSWER: a) Tambora in 1815 C.E.
+b) Vesuvius in 79 C.E.
+c) Mt. St. Helens in 1980 C.E.
+d) Mt. Pinatubo in 1991 C.E.
+e) El Chichon in 1982 C.E.
+
+QUESTION: Principal factors that come into play when volcanism affects climate include all but which of the following?
+a) the size and rate of eruptions
+b) the heights of eruption columns
+c) the types of gases and the atmospheric level at which they are placed
+d) the latitude of the eruptions
+ANSWER: e) All of these factors are considered.
+
+QUESTION: One of the greatest weather disasters in U.S. history occurred during the \makebox[1cm]{\Rivpt\hrulefill\Rivpt}, when several years of drought turned grain-growing areas in the center of the nation into the 'Dust Bowl'. 
+a) 1920s
+ANSWER: b) 1930s
+c) 1950s
+d) 1970s
+e) 1990s
+
+QUESTION: The human drama of the 'Dust Bowl' was captured in many articles and books, including \makebox[1cm]{\Rivpt\hrulefill\Rivpt}.
+a) \emph{Dust in My Bowl} by Herman Melville 
+b) \emph{Drought in the Land of Oz} by William Inge
+c) \emph{Cannery Row} by John Steinbeck 
+ANSWER: d) \emph{The Grapes of Wrath} by John Steinbeck 
+e) \emph{Popcorn on the Cob} by William Inge
+
+QUESTION: Which of the following is least significant as a greenhouse gas on Earth?
+a) ozone
+b) methane
+c) water vapor
+ANSWER: d) helium
+e) CO\ensuremath{_2}
+
+QUESTION: The level of oxygen in the form of O\ensuremath{_2} in the Earth's atmosphere \makebox[1cm]{\Rivpt\hrulefill\Rivpt}.
+ANSWER: a) has not changed substantially in the past 450 million years
+b) is drastically decreasing due to pollution
+c) is no different than it was 4.6 billion years ago
+d) is drastically increasing due to growth of new bacterial strains
+e) cannot change because Earth is a closed system. 
+
+QUESTION: Episodes of climate change during the last 1000 years include all but which of the following?
+a) the Maunder Minimum
+b) the Medieval Maximum
+c) the Little Ice Age
+ANSWER: d) the Renaissance Warming
+e) All of the above were episodes of short-term climate change.
+
+QUESTION: Indications of global warming in the last half of the 20th century include all but which of the following?
+a) increasing abundance of warm-water species in the North Atlantic Ocean
+b) higher tree-line in mountainous regions of Europe and New Zealand
+c) earlier arrival of migrating birds in springtime
+ANSWER: d) people noticing how much warmer the weather is
+e) All of the above are documented observations indicating global warming.
+
+QUESTION: Likely changes in the 21st century due to global warming include all but which of the following?
+ANSWER: a) 30 meter rise in sea level
+b) melting and retreat of the Greenland and west Antarctic ice sheets
+c) melting of permafrost in Arctic regions
+d) northward advance of forests inside the Arctic circle
+e) more frequent severe drought in the central United States

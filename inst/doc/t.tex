@@ -1,0 +1,27 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath} %Never write a paper without using amsmath for its many new commands
+\usepackage{amssymb} %Some extra symbols
+\usepackage{makeidx} %If you want to generate an index, automatically
+\usepackage{graphicx} %If you want to include postscript graphics
+%%%  \usepackage{mystyle} %Create your own file, mystyle.sty where you put all your own \newcommand statements
+\usepackage{amscd}
+
+\newcommand{\mydegree}{ \ensuremath{^\circ} }
+\newcommand{\Rivpt}{\rule{.1pt}{1pt}}
+\clubpenalty10000
+\widowpenalty10000
+\raggedbottom
+\addtolength{\topskip}{0pt plus 10pt}
+\let\oldsubsubsection=\subsubsection
+\renewcommand{\subsubsection}{%
+\filbreak
+\oldsubsubsection
+}
+
+\begin{document}
+
+\begin{enumerate}
+\setlength{\parskip}{1cm}%
+\include{exam2A}
+\end{enumerate}
+\end{document}
