@@ -16,23 +16,22 @@ Get.testbank(fn)
   Structure of input file is strict: see the vignette
   for an example.
   Each questions starts with the
-  tag QUESTION: (there is a space following the colon on all tags)
-  followed by answers
+  tag "QUESTION: " followed by answers
   with the correct answer indicated by
-  the tag ANSWER: .
-  The tag FIG:  allows the examiner
+  the tag "ANSWER: ".
+  The tag "FIG: " allows the examiner
   to include a figure with a latex tag
   for reference. For example:
-  \samp{
-    QUESTION: What was the world like during the Late Paleocene Torrid Age?
-    ANSWER: a. Most of the world was wetter and warmer.
-    b. Most of the world was drier and warmer.
-    c. Most of the world was wetter, but a little cooler.
-    d. Most of the world was a desert.
-    e. It is impossible to estimate conditions at that time.
-  }
+\begin{verbatim}
+QUESTION: What was the world like during the Late Paleocene Torrid Age?
+ANSWER: a\) Most of the world was wetter and warmer.
+b\) Most of the world was drier and warmer.
+c\) Most of the world was wetter, but a little cooler.
+d\) Most of the world was a desert.
+e\) It is impossible to estimate conditions at that time.
+\end{verbatim}
+  
 }
-
 \value{
   List: list of Questions 
   

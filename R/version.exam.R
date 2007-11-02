@@ -1,5 +1,5 @@
 `version.exam` <-
-function(Qbank, V, exnumber="Exam 1", seqnum="2", examdate='', instructor="", course="", instructions="", SAMP=TRUE )
+function(Qbank, V, exnumber="Exam 1", seqnum="2", examdate='', instructor="", course="", instructions="" )
 {
   if(missing(exnumber)) {  exnumber="Exam 1" }
   if(missing(seqnum)) { seqnum="1" }
@@ -9,20 +9,11 @@ function(Qbank, V, exnumber="Exam 1", seqnum="2", examdate='', instructor="", co
     if(missing(course)) course=""
     
     if(missing(instructions)) instructions=""
-    if(missing(SAMP)) SAMP=TRUE
 
   
-
-
-if(SAMP==TRUE)   {  QTEMP = ran.exam(Qbank)  } else { QTEMP = Qbank ; attr(QTEMP, "QBord")<-c(1:length(Qbank))   }
-
-
-  QBord  = attr(QTEMP, "QBord")
-
-    
+  QTEMP = ran.exam(Qbank)
   outtex = paste(sep=".",V, "tex" )
   outMAST  = paste(sep="", V, "MAST" )
-  outSOLTN = paste(sep="", V, "SOLTN" )
 
 
   examname=paste(sep=" ", exnumber, "Seq", seqnum)
@@ -33,25 +24,15 @@ if(SAMP==TRUE)   {  QTEMP = ran.exam(Qbank)  } else { QTEMP = Qbank ; attr(QTEMP
   MASTtex  = paste(sep=".", outMAST , "tex" )
 
 
-  
+    outsolut  = paste(sep="", V, "solutions.tex" )
+
   MASTdvi  = paste(sep=".", outMAST , "dvi" )
   MASTps  = paste(sep=".", outMAST , "ps" )
   MASTpdf  = paste(sep=".", outMAST , "pdf" )
-
-
-SOLTNtex  = paste(sep=".", outSOLTN , "tex" )
-
-  
-  SOLTNdvi  = paste(sep=".", outSOLTN , "dvi" )
-  SOLTNps  = paste(sep=".", outSOLTN , "ps" )
-  SOLTNpdf  = paste(sep=".", outSOLTN , "pdf" )
-
-
-  
   make.exam(QTEMP, ofile=outtex )
 
   
-  make.solution(QTEMP, ofile=outSOLTN)
+  make.solution(QTEMP, ofile= outsolut)
 
 
   prep.exam(MASTtex, V , instructor=instructor, examdate=examdate, course=course, examname=examname, instructions=instructions)
@@ -70,45 +51,13 @@ SOLTNtex  = paste(sep=".", outSOLTN , "tex" )
   
 ####  system(paste(sep=" ", "ps2pdf", MASTps,"  >", MASTpdf))
 
-  cat("####  To get the final output, change directory to current directory.", sep="\n")
-  cat("####  Execute the following system commands outside of R:", sep="\n")
+  cat("To get the final output, change directory to current directory.", sep="\n")
+  cat("Execute the following system commands outside of R:", sep="\n")
   cat(paste(sep=" ", "latex", outMAST ), sep="\n")
   cat(paste(sep=" ", "latex", outMAST ), sep="\n")
   
  cat(paste(sep=" ", "dvips -Ppdf",  MASTdvi , " >" , MASTps ), sep="\n")
  cat(paste(sep=" ", "ps2pdf", MASTps,"  >", MASTpdf), sep="\n")
-
-
-
- #### cat(file="latex.run", "####  To get the final output, change directory to current directory.", sep="\n")
- #### cat(file="latex.run","####  Execute the following system commands outside of R:", sep="\n", append = TRUE)
-
-  cat(file="latex.run", sep="\n", append = TRUE)
-  cat(file="latex.run",paste(sep=" ", "latex", outMAST ), sep="\n", append = TRUE)
-  cat(file="latex.run",paste(sep=" ", "latex", outMAST ), sep="\n", append = TRUE)
-  
- cat(file="latex.run",paste(sep=" ", "dvips -Ppdf",  MASTdvi , " >" , MASTps ), sep="\n", append = TRUE)
- cat(file="latex.run",paste(sep=" ", "ps2pdf", MASTps,"  >", MASTpdf), sep="\n", append = TRUE)
-
-cat(file="latex.run", sep="\n", append = TRUE)
-  cat(file="latex.run",paste(sep=" ", "latex", outSOLTN ), sep="\n", append = TRUE)
-  cat(file="latex.run",paste(sep=" ", "latex", outSOLTN ), sep="\n", append = TRUE)
-  
- cat(file="latex.run",paste(sep=" ", "dvips -Ppdf",  SOLTNdvi , " >" , SOLTNps ), sep="\n", append = TRUE)
- cat(file="latex.run",paste(sep=" ", "ps2pdf", SOLTNps,"  >", SOLTNpdf), sep="\n", append = TRUE)
-
-###########   make a key:
-
-  keyfile = paste(sep=".", outMAST, "key") 
-  cat(file=keyfile , sep="\n", append = FALSE)
-  for(i in 1:length(QTEMP)) { cat(file=keyfile, paste(sep=" ", i, "ORIG:",  QBord[i], "BUBBLE:",  QTEMP[[i]]$numANS, QTEMP[[i]]$a) , sep="\n",append = TRUE) }
-
-  
- ####
- ####  latex examBsolutions.tex
-
-
-  
 
   
 }

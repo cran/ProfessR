@@ -6,15 +6,13 @@
  Save an ASCII version of a selected Question Bank
 }
 \usage{
-DUMPbank(ofile, QB, sep = "\n", append=TRUE)
+DUMPbank(ofile, QB, sep = "\n")
 }
 
 \arguments{
   \item{ofile}{character, output file}
   \item{QB}{QuestinBank Structure}
   \item{sep}{seperator between questions}
-   \item{append}{logical, if FALSE a new file is created}
- 
 }
 
 \value{

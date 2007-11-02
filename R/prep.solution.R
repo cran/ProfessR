@@ -3,8 +3,8 @@ function(ofile)
   {
 
 
- if(file.exists(ofile)) { file.remove(ofile) }
-   ##   system(paste("rm ", ofile))
+
+    system(paste("rm ", ofile))
     
     cat(file=ofile, "\\documentclass[10pt]{article}", sep="\n", append = TRUE)
     cat(file=ofile, "\\usepackage{amsmath} %Never write a paper without using amsmath for its many new commands", sep="\n", append = TRUE)

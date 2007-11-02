@@ -8,8 +8,6 @@ function(Qbank)
         Q1[[i]] = Qbank[[ran1[i]]]
         
       }
-
-    attr(Q1, "QBord")<-ran1
     return(Q1)
   }
 

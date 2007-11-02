@@ -1,28 +1,10 @@
 `Get.testbank` <-
-  function(fn)
+function(fn)
   {
 
-##########  this takes an ASCII text file of questions
-#########   and returns a list of questions lists.
-#########  blank lines are stripped.
+    ALLQ = scan(file=fn, what="", sep="\n")
 
-    
-#########  the key word QUESTION: must appear at the beginning of the lne
-#########  same for the the key word ANSWER:
-
-    ##  there should be a blank after the keys words but   the program tries
-    ##  to compensate for no blanks.
-
-###   there should be no blank lines or lines with NO alphanumeric information:
-#######   the program tries to get rid of these also
-    
-
-    
-
-    ALLQ = scan(file=fn, what="", sep="\n",  quiet=TRUE)
-
-    
-    q1 = grep("^QUESTION:", ALLQ)
+    q1 = grep("QUESTION:", ALLQ)
 
 
     Qbank = list()
@@ -36,31 +18,11 @@
         
         ## print(paste(sep=" ", "#####", i, i1, i2))
         ## print(ALLQ[i1:i2])
-
         
-        az1 = substring(ALLQ[i1], 10, 10)
-
-        if(identical(az1, " "))
-          {
-            quest = substring(ALLQ[i1], 11, nchar(ALLQ[i1]))
-
-          }else{
-            
-            quest = substring(ALLQ[i1], 10, nchar(ALLQ[i1]))
-          }
-
-
-
-
-####################   try to eliminate any line that has no content
+        quest = substring(ALLQ[i1], 11, nchar(ALLQ[i1]))
 
 
         ans1 = ALLQ[(i1+1):i2]
-
-        
-        ww=grep("[a-z,A-Z]", ans1)
-        ans1 = ans1[ww]
-        
         grfig = grep("FIG:", ans1)
         if(length(grfig)>=1)
           {
@@ -80,32 +42,12 @@
         
         a1 = grep("ANSWER:", ans1)
         fa1 = ans1[a1]
-
-        az1 = substring(fa1, 8, 8)
-
-        if(identical(az1, " "))
-          {
-            a2 = substring(fa1, 9, nchar(fa1))
-
-          }
-        else
-          {
-            
-            a2 = substring(fa1, 8, nchar(fa1))
-          }
-
-
-
-
-        
-###   a2 = substring(fa1, 9, nchar(fa1))
+        a2 = substring(fa1, 9, nchar(fa1))
         ans1[a1] = a2
 
         Qbank[[i]] = list(Q=quest, A=ans1, a=fa1, numANS=a1, FIG=fignewt)
 
       }
-
-    attr(Qbank, "fn")<-fn
 
     return(Qbank)
 

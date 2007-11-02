@@ -9,14 +9,12 @@
 }
 \usage{data(QBANK1)}
 \format{
-  List:
-   \describe{
+List:
   \item{Q}{Question in latex format (character string)}
   \item{A}{Possible Answers in latex format (vector of character strings)}
   \item{a}{Correct Answer in latex format (character string)}
   \item{numANS}{index number corresponding to correct answer}
   \item{FIG}{character: full path to figure, tag for figure}
-  }
 }
 \details{
 

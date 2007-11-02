@@ -6,8 +6,7 @@
  Calculate the grades of a class of students, given raw scores on exam
 }
 \usage{
-do.grades(ggrades, divs = NULL, cut = 0, tit = "Exam Grades",
-breaks=length(ggrades)/3, ...)
+do.grades(ggrades, divs = NULL, cut = 0, tit = "Exam Grades")
 }
 
 \arguments{
@@ -15,8 +14,6 @@ breaks=length(ggrades)/3, ...)
   \item{divs}{divisions for grades (optional)}
   \item{cut}{low end Cut off to remove 0 from statistics }
   \item{tit}{Title for Figure}
-  \item{breaks}{breaks for the histogram, default=length(ggrades)/3}
-  \item{\dots}{other parameters for hist}
 }
 \details{
   To remove students who do not take the test a low end cut off
@@ -40,18 +37,13 @@ breaks=length(ggrades)/3, ...)
 \note{
   Grades are determined linearly within a division
 }
-\seealso{jist, DUMPgrades, getlet }
-
+\seealso{}
 \examples{
-
-
 g = rnorm(n=130, m=82, sd=10)
 g[g>100] = 100
 g[g<1] = 1
 
 B = boxplot(g)
-
-##########   set divs autometically:
 
 divs = c(min(g), B$stats[1:4] + diff(B$stats)/2, max(g) )
 
@@ -62,24 +54,6 @@ divs = c(min(g), B$stats[1:4] + diff(B$stats)/2, max(g) )
 
 ### otherwise use previously calculated divs:
 D1 = do.grades(g, divs=divs, tit="GEOL 105 Exam 1")
-
-\dontrun{
-
-####  this is interactive
-D1 = do.grades(g, tit="GEOL 105 Exam 1")
-
-#######  list the grades:
-cbind(D1$grades,  D1$lett,  D1$scor)
-
-####### if you have names or ID's try:
-#######  cbind(IDs, D1$grades,  D1$lett,  D1$scor)
- DUMPgrades(D1, file="TEST1grades", id=IDS )
-
-
-}
-
-
-
 
 
 }

@@ -3,7 +3,6 @@
 
 \title{Random order of Exam}
 \description{
-  Randomly re-order the questions in a Question Bank 
  
 }
 \usage{

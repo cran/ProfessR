@@ -34,7 +34,7 @@
 \numberwithin{equation}{section}
 
 %%%   \SweaveOpts{prefix.string=rseis}
-\SweaveOpts{prefix=TRUE,prefix.string=rseis,include=FALSE}
+
 
 
 \author{Jonathan M. Lees\\
@@ -128,45 +128,70 @@ Any number of questions/answers can be in the databank.
 Once they are read in via the parsing program,
 questins can be selected in R 
 and a specific Exam is generated.
-<<>>=
-library("ProfessR")
-
-QB1 = Get.testbank('climate_change_abbott.txt') 
-QB2 = Get.testbank('tsunami_abbot_web.txt') 
-@ 
+\begin{Schunk}
+\begin{Sinput}
+> library("ProfessR")
+> QB1 = Get.testbank("climate_change_abbott.txt")
+> QB2 = Get.testbank("tsunami_abbot_web.txt")
+\end{Sinput}
+\end{Schunk}
 Here we have two data banks installed and we want to select a
 random sample of 
 12 questions from the first and 9 from the second.
-<<>>=
-
-L1 = length(QB1)
-L2 = length(QB2)
-
-isel1 = sample(1:L1)
-QBfinal =  list()
-for(i in 1:12) { QBfinal[[i]] = QB1[[isel1[i]]] }
-isel2 = sample(1:L2)
-for(i in 1:9) { QBfinal[[i+12]] = QB2[[isel2[i]]] }
-
-@ 
+\begin{Schunk}
+\begin{Sinput}
+> L1 = length(QB1)
+> L2 = length(QB2)
+> isel1 = sample(1:L1)
+> QBfinal = list()
+> for (i in 1:12) {
++     QBfinal[[i]] = QB1[[isel1[i]]]
++ }
+> isel2 = sample(1:L2)
+> for (i in 1:9) {
++     QBfinal[[i + 12]] = QB2[[isel2[i]]]
++ }
+\end{Sinput}
+\end{Schunk}
 
 To insure that there is no order to the questions
 the exam can be randomized with simple calls to
-<<>>=
-QA1 = ran.exam(QBfinal)
-@ 
+\begin{Schunk}
+\begin{Sinput}
+> QA1 = ran.exam(QBfinal)
+\end{Sinput}
+\end{Schunk}
 
 On the other hand we may wish to create 2 versions of the same exam with 
 questions mixed up to reduce the possibility of cheating:
 
-<<>>=
-examdate="TUES OCT 30 2007"
-
-version.exam(QBfinal, "exam2A" , exnumber="Exam 2", seqnum="1", examdate=examdate)
-
-version.exam(QBfinal, "exam2B" , exnumber="Exam 2", seqnum="2", examdate=examdate)
-
-@ 
+\begin{Schunk}
+\begin{Sinput}
+> examdate = "TUES OCT 30 2007"
+> version.exam(QBfinal, "exam2A", exnumber = "Exam 2", seqnum = "1", 
++     examdate = examdate)
+\end{Sinput}
+\begin{Soutput}
+To get the final output, change directory to current directory.
+Execute the following system commands outside of R:
+latex exam2AMAST
+latex exam2AMAST
+dvips -Ppdf exam2AMAST.dvi  > exam2AMAST.ps
+ps2pdf exam2AMAST.ps   > exam2AMAST.pdf
+\end{Soutput}
+\begin{Sinput}
+> version.exam(QBfinal, "exam2B", exnumber = "Exam 2", seqnum = "2", 
++     examdate = examdate)
+\end{Sinput}
+\begin{Soutput}
+To get the final output, change directory to current directory.
+Execute the following system commands outside of R:
+latex exam2BMAST
+latex exam2BMAST
+dvips -Ppdf exam2BMAST.dvi  > exam2BMAST.ps
+ps2pdf exam2BMAST.ps   > exam2BMAST.pdf
+\end{Soutput}
+\end{Schunk}
 
 
 

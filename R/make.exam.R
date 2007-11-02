@@ -4,13 +4,8 @@ function(Qbank, ofile="examq.tex")
   if(missing(ofile)) { ofile = "examq.tex" }
  
   ansfile = paste(sep=".", ofile, "ANS")
-
-  if(file.exists(ofile)) { file.remove(ofile) }
-  if(file.exists(ansfile)) { file.remove(ansfile) }
-
-  ##  system(paste(sep=" ", "rm", ofile))
-  
-  ## system(paste(sep=" ", "rm", ansfile))
+  system(paste(sep=" ", "rm", ofile))
+  system(paste(sep=" ", "rm", ansfile))
 
   for(i in 1:length(Qbank))
     {

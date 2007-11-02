@@ -1,6 +1,5 @@
 \name{getlet}
 \alias{getlet}
-\alias{getlet2}
 
 \title{Get Letter Grades}
 \description{
@@ -26,10 +25,6 @@ LIST:
   \item{divs}{divisions used in setting scores}
   \item{LETS}{Letters for grades}
   \item{SCRS}{numeric divisions used for LETS}
-
-    \item{olett}{letter values, older version}
-    \item{oscor}{scores after scaling, older version binned }
-    
 }
 
 \author{Jonathan M. Lees<jonathan.lees@unc.edu>}

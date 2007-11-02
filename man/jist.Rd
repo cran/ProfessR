@@ -6,7 +6,7 @@
  Given a vector of grades, add the letters to an existing histogram.
 }
 \usage{
-jist(h, Z=1, L=1, col=2)
+jist(h, Z, L, col = 2)
 }
 
 \arguments{
@@ -16,8 +16,7 @@ jist(h, Z=1, L=1, col=2)
   \item{col}{color for plotting letters}
 }
 \details{
-  This will add information on an existing histogram plot.  If h is the
-  output of do.grades() then Z and L are ignored.
+  This will add information on an existing histogram plot.
 }
 \value{
   Graphical Side effects
@@ -44,13 +43,6 @@ divs = c(min(g), B$stats[1:4] + diff(B$stats)/2, max(g) )
 D1 = do.grades(g, divs=divs, tit="GEOL 105 Exam 1")
 
 jist(D1$hist, D1$grades, D1$lett)
-
-##########  or simply:
-
-D1 = do.grades(g, divs=divs, tit="GEOL 105 Exam 1")
-
-jist(D1)
-
 
 
 }
