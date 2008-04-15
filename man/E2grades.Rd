@@ -20,7 +20,9 @@ g = E2grades
 
 B = boxplot(g[g>1], plot=FALSE)
 divs = c(min(g), B$stats[1:4] + diff(B$stats)/2, max(g) )
- get(getOption("device"))(width = 12, height = 7)
+###  get(getOption("device"))(width = 12, height = 7)
+
+dev.new()
 
 D1 = do.grades(g, divs=divs, cut = 15, tit="GEOL 105 Exam 1")
 

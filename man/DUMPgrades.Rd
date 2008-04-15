@@ -17,7 +17,7 @@ DUMPgrades(D1, file = NULL, id = NULL, names = NULL)
 \value{
   Side effects
 }
-\references{}
+
 \author{Jonathan M. Lees<jonathan.lees@unc.edu>}
 
 \seealso{do.grades}

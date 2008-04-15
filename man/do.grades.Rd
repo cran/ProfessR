@@ -40,7 +40,7 @@ breaks=length(ggrades)/3, ...)
 \note{
   Grades are determined linearly within a division
 }
-\seealso{}
+
 \examples{
 g = rnorm(n=130, m=82, sd=10)
 g[g>100] = 100
