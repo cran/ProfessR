@@ -40,13 +40,18 @@ breaks=length(ggrades)/3, ...)
 \note{
   Grades are determined linearly within a division
 }
+\seealso{jist, DUMPgrades, getlet }
 
 \examples{
+
+
 g = rnorm(n=130, m=82, sd=10)
 g[g>100] = 100
 g[g<1] = 1
 
 B = boxplot(g)
+
+##########   set divs autometically:
 
 divs = c(min(g), B$stats[1:4] + diff(B$stats)/2, max(g) )
 
@@ -57,6 +62,24 @@ divs = c(min(g), B$stats[1:4] + diff(B$stats)/2, max(g) )
 
 ### otherwise use previously calculated divs:
 D1 = do.grades(g, divs=divs, tit="GEOL 105 Exam 1")
+
+\dontrun{
+
+####  this is interactive
+D1 = do.grades(g, tit="GEOL 105 Exam 1")
+
+#######  list the grades:
+cbind(D1$grades,  D1$lett,  D1$scor)
+
+####### if you have names or ID's try:
+#######  cbind(IDs, D1$grades,  D1$lett,  D1$scor)
+ DUMPgrades(D1, file="TEST1grades", id=IDS )
+
+
+}
+
+
+
 
 
 }

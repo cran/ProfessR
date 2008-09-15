@@ -18,6 +18,10 @@ function(ggrades, divs=NULL, cut=0, tit="Exam Grades", breaks=length(ggrades)/3,
   BIGN = length(ggrades)
   
   HA = hist(agrades,  main=tit, xlab="Scores", breaks=breaks, ...)
+
+  points(agrades, rep(0, length(agrades)), col='purple')
+
+  
    axis(1, at=seq(from=10*round(min(agrades[agrades>0])/10), to=max(agrades), by=10), labels=TRUE)
    axis(1, at=seq(from=10*round(min(agrades[agrades>0])/10), to=max(agrades), by=2), labels=FALSE)
 
@@ -44,9 +48,16 @@ function(ggrades, divs=NULL, cut=0, tit="Exam Grades", breaks=length(ggrades)/3,
   if(is.null(divs))
     {
       mtext(text="Click 4 divisions from LOW to HIGH", side=3, at = u[1], line=2, adj=0)
-      K = locator(type='p', col=4, n=4)
-      abline(v=K$x, col=4)
-      divs =  c(min(ggrades), K$x, max(ggrades))
+      K = list(x=NULL, y=NULL)
+      
+      for(LK in 1:4)
+        {
+          K1 = locator(type='p', col='blue', n=1)
+          abline(v=K1$x, col='blue', lwd=2)
+          K = list(x=c(K$x, K1$x) , y=c(K$y, K1$y))
+        }
+
+       divs =  c(min(ggrades), K$x, max(ggrades))
     }
 
   divs = sort(divs)
