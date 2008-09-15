@@ -1,9 +1,9 @@
 
-prep.exam<-function(OF, incfile, instructor="", examdate="", course="",  examname="", instructions="")
+prep.exam<-function(OF, incfile, instructor="", examdate=" ", course="",  examname="", instructions="")
   {
 
     if(missing(instructor)) instructor=""
-    if(missing(examdate)) examdate=""
+    if(missing(examdate)) examdate=" "
     if(missing(course)) course=""
     if(missing(examname)) examname=""
     if(missing(instructions)) instructions=""

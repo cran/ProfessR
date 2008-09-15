@@ -9,7 +9,7 @@ Prints out a bank of questions, one at a time
 seebank(QB)
 }
 \arguments{
-  \item{QB}{ QuestinBank Structure}
+  \item{QB}{ QuestionBank Structure}
 }
 
 \value{
@@ -21,8 +21,12 @@ seebank(QB)
 
 \examples{
 
+\dontrun{
+####  seebank program is interactive -
 data(QBANK1)
 seebank(QBANK1)
+}
+
 
 
 }

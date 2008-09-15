@@ -17,22 +17,32 @@ repair.id<-function(sisroster, scrfn)
 
     scan.names = as.vector(scrfn$nam)
     scan.ID  = as.vector(scrfn$ID)
-  
+
+    if(length(sisroster$fullname)<1)
+      {
+        sisroster$fullname = paste(sep=' ',sisroster$firstname, sisroster$lastname)
+
+      }
+
+    BBlast = tolower(sisroster$lastname)
+    BBfull = tolower(sisroster$fullname)
+    BBID = sisroster$ID
+    
   
   newid = as.vector(scan.ID)
     
-  m1 = match(sisroster$ID, scan.ID)
+  m1 = match(BBID, scan.ID)
 
-  m2 = match(scan.ID, sisroster$ID )
+  m2 = match(scan.ID, BBID )
 
-  w1 = which(is.na( sisroster$ID[m2]))
+  w1 = which(is.na( BBID[m2]))
 
 
-## cbind(sisroster$ID[m2], scan.ID, scan.names)
+## cbind(BBID[m2], scan.ID, scan.names)
 
  
 
- ##   sisroster$lastname
+ ##   BBlast
 
     
   if(length(w1)<1) { print("no problems"); return() }
@@ -60,9 +70,9 @@ repair.id<-function(sisroster, scrfn)
         {
           print(paste("This is a One-Name ID, searching for repair:",Lname ))
           M = 0
-          for(m in 1:length(sisroster$lastname))
+          for(m in 1:length(BBlast))
             {
-              tname = tolower(sisroster$lastname[m])
+              tname = tolower(BBlast[m])
               gnum = grep(tname , Lname)
               ##print(paste(sep=' ', m, gnum, tname, Lname))
               
@@ -78,12 +88,15 @@ repair.id<-function(sisroster, scrfn)
 
             }
 
-          Lname=sisroster$lastname[M]
+          Lname=c(BBlast[M], sisroster$firstname[M])
 
         }
 
       
-      g1 = grep(Lname[1], sisroster$lastname)
+      gN1 = grep(Lname[1], BBlast)
+      gN2 = grep(Lname[2], BBlast)
+
+      g1 = c(gN1, gN2) 
 
       if(length(g1)<1)
         {
@@ -91,13 +104,13 @@ repair.id<-function(sisroster, scrfn)
           name15 = substr(lameo, 1,5)
           namend = substr(lameo, nchar(lameo)-5, nchar(lameo))
           
-          g1 = grep(name15, sisroster$lastname)
-          g2 = grep(namend, sisroster$lastname)
+          g1 = grep(name15, BBlast)
+          g2 = grep(namend, BBlast)
           g1 = c(g1, g2)
           if(length(g1)<1)
             {
               name15 = substr(lameo, 1,1)
-              g1 = grep(name15, sisroster$lastname)
+              g1 = grep(name15, BBlast)
             }
         }
 
@@ -106,8 +119,8 @@ repair.id<-function(sisroster, scrfn)
       if(length(g1)==1)
 	{
           cat("---FOUND MATCH - FIXING---------", sep="\n")
-          print(data.frame(cbind(scan.names[w1[i]], scan.ID[w1[i]], sisroster$lastname[g1], sisroster$fullname[g1]	, sisroster$ID[g1])))
-          newid[w1[i]]=sisroster$ID[g1]
+          print(data.frame(cbind(scan.names[w1[i]], scan.ID[w1[i]], BBlast[g1], BBfull[g1]	, BBID[g1])))
+          newid[w1[i]]=BBID[g1]
         }
       else
         {
@@ -119,7 +132,7 @@ repair.id<-function(sisroster, scrfn)
           cat("--------LIST--------", sep="\n")
           cat("possible matches:", sep="\n")
 
-          pname = paste(sep=":", 1:length(g1), sisroster$fullname[g1])
+          pname = paste(sep=":", 1:length(g1), BBfull[g1])
 
           cat(pname, sep="\n")
 
@@ -130,7 +143,7 @@ repair.id<-function(sisroster, scrfn)
             {
               icho = as.numeric(cho)
               
-              newid[w1[i]]=sisroster$ID[g1[icho]]
+              newid[w1[i]]=BBID[g1[icho]]
             }
 
         }

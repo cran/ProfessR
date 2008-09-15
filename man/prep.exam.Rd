@@ -30,6 +30,13 @@ prep.exam(OF, incfile, instructor="", examdate="", course="",  examname="", inst
 \seealso{version.exam}
 \examples{
 
+
+
+\dontrun{
+######  since the program produces a file on the local
+######   system, do not run this example
+
+
 examdate="THURS Sep 20 2007"
 
 
@@ -51,11 +58,12 @@ examname=paste(sep=" ", exnumber, "Seq", seqnum)
 
 
 
-instructions=c("There are 23 number of questions.", "Answer all questions.", "Mark clearly.")
-
+instructions=c("There are 50 questions.", "Answer all questions.", "Mark clearly.")
+\dontrun{
 prep.exam(outMAST, outtex , instructor=Me, examdate=examdate, course=course, examname=examname, instructions=instructions)
+}
 
-
+}
 
 
 

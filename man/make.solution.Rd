@@ -28,8 +28,10 @@ make.solution(Qbank, ofile = "answers.tex")
 
 data(QBANK1)
 
-
+\dontrun{
  make.solution(QBANK1, ofile= "solutions.tex")
+}
+
 
 
 }

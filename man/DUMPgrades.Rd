@@ -38,9 +38,12 @@ divs = c(min(g), B$stats[1:4] + diff(B$stats)/2, max(g) )
 
 ### otherwise use previously calculated divs:
 D1 = do.grades(g, divs=divs, tit="GEOL 105 Exam 1")
+
+\dontrun{
+
 DUMPgrades(D1, file="TEST1grades" )
 
-
+}
 
 }
 \keyword{misc}

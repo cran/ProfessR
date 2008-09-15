@@ -11,8 +11,8 @@ DUMPbank(ofile, QB, sep = "\n", append=TRUE)
 
 \arguments{
   \item{ofile}{character, output file}
-  \item{QB}{QuestinBank Structure}
-  \item{sep}{seperator between questions}
+  \item{QB}{QuestionBank Structure}
+  \item{sep}{separator between questions}
    \item{append}{logical, if FALSE a new file is created}
  
 }

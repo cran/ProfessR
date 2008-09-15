@@ -31,7 +31,8 @@ version.exam(Qbank, V, exnumber = "Exam 1", seqnum = "2", examdate ='', instruct
 
 \seealso{ran.exam, make.exam, prep.exam}
 \examples{
-##
+##  the example creates files on the local system - thus not run
+\dontrun{
 data(QBANK1)
 
 examdate="THURS Sep 20 2007"
@@ -39,10 +40,8 @@ examdate="THURS Sep 20 2007"
 version.exam(QBANK1, "exam1A" , exnumber="Exam 1", seqnum="1", examdate=examdate)
 
 
-
-
-examdate="THURS Sep 20 2007"
-
+##################
+examdate=date()
 
 seqnum="1"
 exnumber="Exam 1"
@@ -67,12 +66,10 @@ paste(sep=" ", "There are",K," number of questions."),
 "Answer all questions.","Use number 2 pencil",
 "Mark each box clearly.")
 
-
-
 version.exam(QBANK1, "exam1B" , exnumber="Exam 1", seqnum="B",
 examdate=examdate, instructor=Me, course=course , instructions=instructions)
 
-
+}
 
 }
 

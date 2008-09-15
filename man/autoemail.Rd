@@ -24,7 +24,7 @@ autoemail(eadd, sfile, hnote = "Exam Results")
 
 \author{Jonathan M. Lees<jonathan.lees@unc.edu>}
 \note{
-  Need to change the from desgnation.
+  Need to change the from designation.
   
 }
 \seealso{IDandEM}

@@ -26,7 +26,12 @@ make.exam(Qbank, ofile = "examq.tex")
 \examples{
 
 data(QBANK1)
+
+\dontrun{
 make.exam(QBANK1, ofile="exam1.tex")
+}
+
+
 
 }
 

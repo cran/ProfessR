@@ -51,7 +51,7 @@ g[g<1] = 1
 
 B = boxplot(g)
 
-##########   set divs autometically:
+##########   set divisions automatically:
 
 divs = c(min(g), B$stats[1:4] + diff(B$stats)/2, max(g) )
 
@@ -73,8 +73,11 @@ cbind(D1$grades,  D1$lett,  D1$scor)
 
 ####### if you have names or ID's try:
 #######  cbind(IDs, D1$grades,  D1$lett,  D1$scor)
- DUMPgrades(D1, file="TEST1grades", id=IDS )
 
+\dontrun{
+
+ DUMPgrades(D1, file="TEST1grades", id=IDS )
+}
 
 }
 
