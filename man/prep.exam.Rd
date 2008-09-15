@@ -12,7 +12,7 @@ prep.exam(OF, incfile, instructor="", examdate="", course="",  examname="", inst
 \arguments{
   \item{OF}{Character string output files}
   \item{incfile}{Character, include file name for questions}
-  \item{instructor}{}
+  \item{instructor}{name of instructor}
   \item{examdate}{Date of the examination}
   \item{course}{Name of the course, character}
   \item{examname}{title of exam}
