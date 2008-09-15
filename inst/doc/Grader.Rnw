@@ -104,7 +104,10 @@ The main code in ProfessR now can plot the grades and
 <<>>=
 
 library(ProfessR)
- get(getOption("device"))(width = 12, height = 7)
+## get(getOption("device"))(width = 12, height = 7)
+dev.new()
+
+
 D1 = do.grades(g, divs=divs, tit="GEOL 105 Exam 1")
 @ 
 display a histogram of the grades with divisions
@@ -171,6 +174,27 @@ showing all the letters grades plotted on the
 histogram.  Students can see their grade and
 are often satisfied that they understand the 
 idea of scaling.
+
+\subsection{Cleanup}
+
+As a side effect of the ProfessR routines we have created
+several files to be used later.  For this vignette, however,
+we will delete these files.
+
+\begin{verbatim}
+file.remove("Grader.tex")
+file.remove("grades-004.pdf")
+file.remove("grades-005.pdf")
+
+file.remove("Grader.dvi")
+file.remove("Grader.log")
+file.remove("Grader.aux")
+\end{verbatim}
+
+
+
+
+
 
 
 \end{document}

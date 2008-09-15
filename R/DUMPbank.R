@@ -1,7 +1,19 @@
-DUMPbank<-function(ofile, QB, sep="\n")
+DUMPbank<-function(ofile, QB, sep="\n", append=TRUE)
 {
   if(missing(sep)) sep=NULL
+  if(missing(append)) append=TRUE
+  
 #########  dump out an ascii version of an exam question bank
+
+if(append==FALSE)
+  {
+    gg = deparse(substitute(QB))
+
+    cat(file=ofile,paste(sep="", "############## ", gg) , append=FALSE, sep="\n")
+  }
+
+  
+  
   for(i in 1:length(QB))
     {
       Q1 = QB[[i]]
@@ -18,6 +30,7 @@ DUMPbank<-function(ofile, QB, sep="\n")
 
     }
 #######  example: DUMPbank("dafinal", QBFINAL)
+#######  
 
 }
 

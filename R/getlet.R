@@ -1,6 +1,8 @@
 `getlet` <-
 function(ggrades, divs)
 {
+############################
+  ############################   OLD WAY
 M = length(divs)
   N = M
   AP =  ggrades>=divs[N]-(divs[N]-divs[N-1])/3
@@ -25,49 +27,87 @@ M = length(divs)
   N = M-4
   E = ggrades>=divs[N-1]&ggrades<divs[N]
 
-  letts = rep("E", length(ggrades))
-  scores  = rep(0, length(ggrades))
+  oletts = rep("E", length(ggrades))
+  oscores  = rep(0, length(ggrades))
 
   SCRS = seq(from=100, by=(-4), length=13)
   LETS = c("A+", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "D-", "E")
 
-  scores[AP] = SCRS[1]
-  scores[A] = SCRS[2]
-  scores[AM] = SCRS[3]
+  oscores[AP] = SCRS[1]
+  oscores[A] = SCRS[2]
+  oscores[AM] = SCRS[3]
 
-  scores[BP] = SCRS[4]
-  scores[B] = SCRS[5]
-  scores[BM] = SCRS[6]
+  oscores[BP] = SCRS[4]
+   oscores[B] = SCRS[5]
+   oscores[BM] = SCRS[6]
 
-  scores[CP] = SCRS[7]
-  scores[C] = SCRS[8]
-  scores[CM] = SCRS[9]
+  oscores[CP] = SCRS[7]
+  oscores[C] = SCRS[8]
+  oscores[CM] = SCRS[9]
 
-  scores[DP] = SCRS[10]
-  scores[D] = SCRS[11]
-  scores[DM] = SCRS[12]
+  oscores[DP] = SCRS[10]
+  oscores[D] = SCRS[11]
+  oscores[DM] = SCRS[12]
 
- scores[E] = SCRS[13]-SCRS[13]*(divs[2]-ggrades[E])/divs[2]
+ oscores[E] = SCRS[13]-SCRS[13]*(divs[2]-ggrades[E])/divs[2]
   
-  letts[AP] = LETS[1]
-  letts[A] = LETS[2]
-  letts[AM] = LETS[3]
+  oletts[AP] = LETS[1]
+  oletts[A] = LETS[2]
+  oletts[AM] = LETS[3]
 
-  letts[BP] = LETS[4]
-  letts[B] = LETS[5]
-  letts[BM] = LETS[6]
+  oletts[BP] = LETS[4]
+  oletts[B] = LETS[5]
+  oletts[BM] = LETS[6]
 
-  letts[CP] = LETS[7]
-  letts[C] = LETS[8]
-  letts[CM] = LETS[9]
+  oletts[CP] = LETS[7]
+  oletts[C] = LETS[8]
+  oletts[CM] = LETS[9]
 
-  letts[DP] = LETS[10]
-  letts[D] = LETS[11]
-  letts[DM] = LETS[12]
+  oletts[DP] = LETS[10]
+  oletts[D] = LETS[11]
+  oletts[DM] = LETS[12]
 
-  letts[E] = LETS[13]
+  oletts[E] = LETS[13]
+############################
+#####################################################  Donna's Way
+ letts = rep("E", length(ggrades))
+  scores  = rep(0, length(ggrades))
 
- 
- return(list(grades=ggrades, lett=letts, scor=scores, divs=divs, LETS=LETS, SCRS=SCRS))
+  SCRS = seq(from=100, by=(-4), length=13)
+  LETS = c("A+", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "D-", "F")
+
+adiff = diff(divs)
+adiff/3
+J = rep(0, 13)
+J[1] = 0
+
+for(i in 2:(M-1))
+  {
+    j = 3*(i-1)-1
+    J[j] = divs[i]+0*adiff[i]/3
+    J[j+1] = divs[i]+1*adiff[i]/3
+    J[j+2] = divs[i]+2*adiff[i]/3
+  }
+
+bdiff = diff(J)
+
+finval = findInterval(ggrades, divs)
+Jinval = findInterval(ggrades, J, all.inside = TRUE)
+
+rLETS = rev(LETS)
+rSCRS = rev(SCRS)
+
+JLET = rLETS[Jinval]
+
+scores = rSCRS[Jinval]+ 4*(ggrades-J[Jinval])/(J[Jinval+1]-J[Jinval])
+
+letts = JLET
+
+scores[scores>=100] = 100
+letts[scores>=100] =LETS[1]
+############################
+######################################
+
+ return(list(grades=ggrades, lett=letts, scor=scores,  olett=oletts, oscor=oscores, divs=divs, LETS=LETS, SCRS=SCRS))
 }
 

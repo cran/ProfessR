@@ -33,7 +33,8 @@
 
 \numberwithin{equation}{section}
 
-%%%   \SweaveOpts{prefix.string=rseis}
+%%%   
+%%%\SweaveOpts{prefix.string=rseis}
 \SweaveOpts{prefix=TRUE,prefix.string=rseis,include=FALSE}
 
 
@@ -224,6 +225,34 @@ test.
 Other changes should be made in that 
 file to reflect the user's set up,
 college, etc.
+
+\subsection{Cleanup}
+
+As a side effect of the ProfessR routines we have created
+several files to be used later.  For this vignette, however,
+we will delete these files.
+
+
+%%%   <<>>=
+\begin{verbatim}
+file.remove("exam2AMAST.tex")
+
+file.remove("exam2AMAST.tex" )
+file.remove("exam2Asolutions.tex" )
+file.remove("exam2A.tex" )
+file.remove("exam2BMAST.tex" )
+file.remove("exam2Bsolutions.tex" )
+file.remove("exam2B.tex" )
+file.remove("ExamMaker.tex" )
+file.remove("Rplots.ps")
+file.remove("ExamMaker.dvi" )
+file.remove("ExamMaker.log" )
+file.remove("ExamMaker.aux" )
+\end{verbatim}
+
+%%   @ 
+
+
 
 \end{document}
 
