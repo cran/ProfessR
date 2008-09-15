@@ -6,7 +6,7 @@
   Create 1 instance of a specific Exam
 }
 \usage{
-version.exam(Qbank, V, exnumber = "Exam 1", seqnum = "2", examdate ='', instructor="",  course="", instructions="")
+version.exam(Qbank, V, exnumber = "Exam 1", seqnum = "2", examdate ='', instructor="",  course="", instructions="", SAMP=TRUE)
 }
 
 \arguments{
@@ -18,6 +18,9 @@ version.exam(Qbank, V, exnumber = "Exam 1", seqnum = "2", examdate ='', instruct
   \item{instructor}{character, name of teacher}
   \item{course}{character, nqme of course}
   \item{instructions}{vector of character strings}
+  \item{SAMP}{logical, if TRUE a random ordering to the questions is produced}
+
+  
 }
 
 \value{

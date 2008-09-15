@@ -27,7 +27,8 @@ function(ggrades, divs=NULL, cut=0, tit="Exam Grades", breaks=length(ggrades)/3,
   B = boxplot(agrades,  plot = FALSE)
   Bdivs = c(min(agrades), B$stats[1:4] + diff(B$stats)/2, max(agrades) )
 
-  abline(v=c( m-2*s,m-s, m,  m+s, m+2*s), lty=2, col=rgb(1, .7, .7) )
+  mstats = c( m-2*s,m-s, m,  m+s, m+2*s)
+  abline(v=mstats, lty=2, col=rgb(1, .7, .7) )
   mtext(text="mean", side=3, at=m, line=0)
 
   abline(v=Bdivs, lty=2, col=rgb(.1, .7, .7) )
@@ -80,14 +81,17 @@ function(ggrades, divs=NULL, cut=0, tit="Exam Grades", breaks=length(ggrades)/3,
       cat(paste(sep=' ', i, LETS[i], length(letts[letts==LETS[i]])), sep="\n")
     }
 
-  cat("Numeric Grade Distribution:", sep="\n")
-  for(i in 1:length(SCRS))
-    {
-      cat(paste(sep=' ', i, SCRS[i], length(scores[scores==SCRS[i]])), sep="\n")
-    }
+#####  cat("Numeric Grade Distribution:", sep="\n")
+#####  for(i in 1:length(SCRS))
+#####    {
+ #####     cat(paste(sep=' ', i, SCRS[i], length(scores[scores==SCRS[i]])), sep="\n")
+#####    }
+
+
+  
   print(paste(sep=' ', "Mean Score=",mean(scores)))
 
 
-  return(list(grades=ggrades, lett=letts, scor=scores, divs=divs, LETS=LETS, SCRS=SCRS, hist=HA))
+  return(list(grades=ggrades, lett=letts, scor=scores, divs=divs, LETS=LETS, SCRS=SCRS, hist=HA, mstats=mstats, bstats=B$stats,  Bdivs=Bdivs))
 }
 
