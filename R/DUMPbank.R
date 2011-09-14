@@ -16,6 +16,8 @@ if(append==FALSE)
   
   for(i in 1:length(QB))
     {
+      ###print(i)
+      Q1 = NULL
       Q1 = QB[[i]]
       cat(file=ofile,"QUESTION: ", append=TRUE, sep="")
       cat(file=ofile,Q1$Q, append=TRUE, sep="\n")
@@ -23,9 +25,16 @@ if(append==FALSE)
         {
           if(j==Q1$numANS) { cat(file=ofile,"ANSWER: ", append=TRUE, sep="") }
           cat(file=ofile,Q1$A[j], append=TRUE, sep="\n")
-
-
         }
+      if(length(Q1$FIG)>0)
+        {
+         
+              cat(file=ofile,"FIG: ", append=TRUE, sep="")
+              cat(file=ofile, paste(sep=" ", Q1$FIG$fn ,Q1$FIG$tag)    , append=TRUE, sep="\n")
+        
+        }
+      
+      
       if(!is.null(sep)) cat(file=ofile,"", append=TRUE, sep=sep)
 
     }

@@ -1,8 +1,10 @@
 `make.exam` <-
-function(Qbank, ofile="examq.tex")
+function(Qbank, ofile="examq.tex", ncol=2)
 {
   if(missing(ofile)) { ofile = "examq.tex" }
- 
+     if(missing(ncol))  ncol =  2
+
+
   ansfile = paste(sep=".", ofile, "ANS")
 
   if(file.exists(ofile)) { file.remove(ofile) }
@@ -41,8 +43,20 @@ function(Qbank, ofile="examq.tex")
       if(!is.null(z$FIG))
          {
            cat(file=ofile, "\\begin{figure}[htp]", sep="\n", append = TRUE)
+           if(ncol==2)
+             {
+               colwidth = 0.5
+
+             }
+           else
+             {
+
+               colwidth = 0.85
+             }
+
+           
            cat(file=ofile, "\\centering", sep="\n", append = TRUE)
-           ofig = paste(sep="", "\\includegraphics[width=0.85\\textwidth]{", z$FIG$fn, "}")
+           ofig = paste(sep="", "\\includegraphics[width=",colwidth,"\\textwidth]{", z$FIG$fn, "}")
            cat(file=ofile, ofig, sep="\n", append = TRUE)
            labfig = paste(sep="", "\\caption{}\\label{",z$FIG$tag ,"}")
            cat(file=ofile,labfig, sep="\n", append = TRUE)

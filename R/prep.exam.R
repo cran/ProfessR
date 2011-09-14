@@ -1,5 +1,5 @@
 
-prep.exam<-function(OF, incfile, instructor="", examdate=" ", course="",  examname="", instructions="")
+prep.exam<-function(OF, incfile, instructor="", examdate=" ", course="",  examname="", instructions="", ncol=2)
   {
 
     if(missing(instructor)) instructor=""
@@ -7,8 +7,20 @@ prep.exam<-function(OF, incfile, instructor="", examdate=" ", course="",  examna
     if(missing(course)) course=""
     if(missing(examname)) examname=""
     if(missing(instructions)) instructions=""
+    if(missing(ncol))  ncol =  2
 
-    cat(file=OF, "\\documentclass[12pt]{article}", sep="\n", append=FALSE)
+
+   
+    
+    docclass = "\\documentclass[12pt]{article}"
+    
+    if(ncol == 2 )
+      {
+        docclass = "\\documentclass[11pt,twocolumn]{article}"
+      }
+
+    ##################   head of latex document
+    cat(file=OF, docclass, sep="\n", append=FALSE)
 
     cat(file=OF, "\\usepackage{amsmath} %use  amsmath ", sep="\n", append=TRUE)
     cat(file=OF, "\\usepackage{amssymb} %Some extra symbols", sep="\n", append=TRUE)

@@ -6,12 +6,14 @@
  Given a question bank, create a test.
 }
 \usage{
-make.exam(Qbank, ofile = "examq.tex")
+make.exam(Qbank, ofile = "examq.tex", ncol=2)
 }
 
 \arguments{
   \item{Qbank}{Question bank list}
   \item{ofile}{Output file}
+    \item{ncol}{number of columns on page, default=2}
+
 }
 \details{
  Dumps out a tex file with the questions

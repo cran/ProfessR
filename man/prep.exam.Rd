@@ -6,7 +6,7 @@
   Prepare Exam for Latex - use simple styles
 }
 \usage{
-prep.exam(OF, incfile, instructor="", examdate="", course="",  examname="", instructions="")
+prep.exam(OF, incfile, instructor="", examdate="", course="",  examname="", instructions="", ncol=2)
 }
 
 \arguments{
@@ -17,7 +17,8 @@ prep.exam(OF, incfile, instructor="", examdate="", course="",  examname="", inst
   \item{course}{Name of the course, character}
   \item{examname}{title of exam}
   \item{instructions}{character vector of instructions}
- 
+   \item{ncol}{number of columns on page, default=2}
+
 }
 
 \value{

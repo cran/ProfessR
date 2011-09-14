@@ -7,7 +7,7 @@
 #########  blank lines are stripped.
 
     
-#########  the key word QUESTION: must appear at the beginning of the lne
+#########  the key word QUESTION: must appear at the beginning of the line
 #########  same for the the key word ANSWER:
 
     ##  there should be a blank after the keys words but   the program tries
@@ -16,16 +16,26 @@
 ###   there should be no blank lines or lines with NO alphanumeric information:
 #######   the program tries to get rid of these also
     
-
+#####     in the file comments are signified by a hash mark # in column 1
     
 
     ALLQ = scan(file=fn, what="", sep="\n",  quiet=TRUE)
 
     
+
+    comm = grep("^#", ALLQ)
+    
+    if(length(comm)>0)
+      {
+        ALLQ = ALLQ[-comm]
+
+      }
+
+    
     q1 = grep("^QUESTION:", ALLQ)
 
-
-    Qbank = list()
+    
+    Qbank = vector(mode="list")
 
     for(i in 1:length(q1))
       {

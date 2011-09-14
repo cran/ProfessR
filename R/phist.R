@@ -15,6 +15,13 @@
 
     u = par("usr")
 
+
+
+    ud = unique(G$grades)
+    rediv = sort(unique(c(ud-1, ud+1)))
+    HH = hist(G$grades,  breaks = rediv , plot = FALSE  )
+
+    G$hist = HH
     gist = G$hist
     
     if(add==FALSE)
@@ -37,18 +44,47 @@
 
        gcols = acols[icol]
         
-        plot(gist, col =gcols , xlab="grades", main=tit   )
+       ##  plot(gist, col =gcols , xlab="grades", main=tit   )
+        
+     ##    u = par("usr")
+        plot(range(gist$breaks),   range(gist$counts) , type='n', axes=FALSE, ann=FALSE)
+        axis(1)
+        axis(2)
+        
         u = par("usr")
-        abline(v=G$divs, lwd=2, col="blue")
+
+
+        As = grep("A", L)
+        Bs = grep("B", L)
+        Cs = grep("C", L)
+        Ds = grep("D", L)
+        Fs = grep("F", L)
+
+        scol  = rep(0, length(L))
+        scol[As] = 1
+        scol[Bs] = 2
+        scol[Cs] = 3
+        scol[Ds] = 4
+        scol[Fs] = 5
+
+        
+        abline(v=G$divs, lwd=2, col=rgb(.5, .5, 1), lty=2)
         
         ddivs = diff(G$divs)
         xgrad = G$divs[1:(length(G$divs)-1)] + ddivs/2
         
         xmin = gist$breaks[1]+(G$divs[2]-gist$breaks[1])/2
         xgrad[1]= xmin
-        text(xgrad , rep(u[4], 5), labels=c("E", "D", "C", "B", "A"), pos=1   )
+        text(xgrad , rep(u[4], 5), labels=c("F", "D", "C", "B", "A"), pos=1   )
   
         grid(NA, NULL, lwd = 2)
+
+
+        den = density(Z)
+        Y = RESCALE(den$y, u[3], u[4], min(den$y), max(den$y))
+        lines(den$x, Y)
+        
+
       }
 
     ## box()
@@ -63,16 +99,20 @@
 
     x =    gist$mids[f1]
 
-    fauxgrades = G$grades-.01
-    fauxgrades[fauxgrades<0] = 0
-
+    ###########################  this is fix to get a good looking plot but it is wrong
+   ####  fauxgrades = G$grades-.01
+   ####  fauxgrades[fauxgrades<0] = 0
+fauxgrades = G$grades
     f1 = findInterval(fauxgrades,  sort(G$hist$breaks) , all.inside =TRUE)
 
     u = sort( unique(f1) )
 
 
-    x =    gist$mids[f1]
+  ##  x =    gist$mids[f1]
 
+    x = Z
+
+    
     bx = G$hist$breaks[f1]
 
     fo = order(f1)
@@ -88,10 +128,13 @@
     }
 
 
-
 #####  o = order(Z); cbind(Z[o], J[o])
     
-    text(x, y, labels=L, col=col, xpd=TRUE, cex=.8, font=2)
+  #####   text(x, y, labels=L, col=col, xpd=TRUE, cex=.8, font=2)
+  #####   text(x, y, labels=L, col=acols[scol] , xpd=TRUE, cex=.8, font=2)
+
+    textrect(x, y, L, textcol = "black", col=acols[scol])
+
 
     
     invisible(list(x=x, y=y, L=L)  )

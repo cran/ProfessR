@@ -59,7 +59,7 @@ repair.id<-function(sisroster, scrfn)
 
       thename = as.character( scan.names[w1[i]] )
       
-      print(paste(sep=" ", i,  w1[i],  scan.names[w1[i]]))
+      print(paste(sep=" ", i,  w1[i],  scan.names[w1[i]], "=SCANNED NAME"))
 
       
       Lname = tolower(unlist(strsplit(scan.names[w1[i]], split=" ")))

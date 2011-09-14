@@ -1,5 +1,5 @@
 `version.exam` <-
-function(Qbank, V, exnumber="Exam 1", seqnum="2", examdate='', instructor="", course="", instructions="", SAMP=TRUE )
+function(Qbank, V, exnumber="Exam 1", seqnum="2", examdate='', instructor="", course="", instructions="", SAMP=TRUE , ncol=2)
 {
   if(missing(exnumber)) {  exnumber="Exam 1" }
   if(missing(seqnum)) { seqnum="1" }
@@ -10,6 +10,7 @@ function(Qbank, V, exnumber="Exam 1", seqnum="2", examdate='', instructor="", co
     
     if(missing(instructions)) instructions=""
     if(missing(SAMP)) SAMP=TRUE
+    if(missing(ncol))  ncol =  2
 
   
 
@@ -48,13 +49,14 @@ SOLTNtex  = paste(sep=".", outSOLTN , "tex" )
 
 
   
-  make.exam(QTEMP, ofile=outtex )
+  make.exam(QTEMP, ofile=outtex, ncol =ncol )
 
   
   make.solution(QTEMP, ofile=outSOLTN)
 
 
-  prep.exam(MASTtex, V , instructor=instructor, examdate=examdate, course=course, examname=examname, instructions=instructions)
+  prep.exam(MASTtex, V , instructor=instructor, examdate=examdate, course=course,
+            examname=examname, instructions=instructions, ncol =ncol)
 
 
  
