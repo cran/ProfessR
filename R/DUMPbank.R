@@ -23,7 +23,7 @@ if(append==FALSE)
       cat(file=ofile,Q1$Q, append=TRUE, sep="\n")
       for(j in 1:length(  Q1$A))
         {
-          if(j==Q1$numANS) { cat(file=ofile,"ANSWER: ", append=TRUE, sep="") }
+          if( identical(j, Q1$numANS)  ) { cat(file=ofile,"ANSWER: ", append=TRUE, sep="") }
           cat(file=ofile,Q1$A[j], append=TRUE, sep="\n")
         }
       if(length(Q1$FIG)>0)

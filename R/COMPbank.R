@@ -1,6 +1,8 @@
 COMPbank<-function(Qbank1,  Qbank2)
   {
-
+##########  compare two question banks
+    ###  return a vector of indeces
+    ###  of questions in Qbank2 that are not in Qbank1 
 
     unpackbank<-function(QBONE)
       {
@@ -45,13 +47,15 @@ COMPbank<-function(Qbank1,  Qbank2)
 
     unmatched2 =   which(is.na( m21))
 
+    ####  these are the indeces of questions that do not match
+    #### i.e. questions in Q2 that are not in Q1
+    
 ####ques = qb2$QS[ which(is.na( m21)) ]
 
 
     return( unmatched2 )
 
   }
-#########   DQ = DUPbank(Qbank)
-
+#########   
 #####  
 

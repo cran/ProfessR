@@ -15,8 +15,8 @@ Grades Setting and Exam Maker
 \tabular{ll}{
 Package: \tab ProfessR\cr
 Type: \tab Package\cr
-Version: \tab 1.3\cr
-Date: \tab 2011-09-14\cr
+Version: \tab 2.0\cr
+Date: \tab 2012-11-26\cr
 License: \tab GPL\cr
 }
 

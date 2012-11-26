@@ -6,13 +6,17 @@
   from a test bank.
 }
 \usage{
-SELbank(QB, N)
+SELbank(QB, N, xclude=NULL)
 }
 \arguments{
   \item{QB}{Question bank
 }
   \item{N}{integer, number of questions to select
-}
+  }
+  \item{xclude}{integer vector, index of questions to exclude, default=NULL
+  }
+
+  
 }
 \details{Progam uses sample to get a random perturbation,
   and then pulls out the first N questions

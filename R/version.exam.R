@@ -99,6 +99,18 @@ cat(file="latex.run", sep="\n", append = TRUE)
  cat(file="latex.run",paste(sep=" ", "dvips -Ppdf",  SOLTNdvi , " >" , SOLTNps ), sep="\n", append = TRUE)
  cat(file="latex.run",paste(sep=" ", "ps2pdf", SOLTNps,"  >", SOLTNpdf), sep="\n", append = TRUE)
 
+
+
+ cat(file="clean.run","/bin/rm *.aux *.dvi *.pdf *.ps *.eps *.log *.key *.ANS *SOLTN *.tex latex.run" , sep="\n", append = FALSE)
+
+
+
+
+
+
+
+
+  
 ###########   make a key:
 IDfier = paste(sep=" ",  V, exnumber, seqnum, examdate, instructor, course)
 

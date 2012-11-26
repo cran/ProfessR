@@ -50,9 +50,15 @@ prep.exam<-function(OF, incfile, instructor="", examdate=" ", course="",  examna
     cat(file=OF, "\\def\\endinstructions{\\par}", sep="\n", append=TRUE)
     
     cat(file=OF, "\\def\\studentinfo{\\noindent\\hspace*{0pt}{\\bfseries Given name}:\\rule{46mm}{0.6pt}", sep="\n", append=TRUE)
-    cat(file=OF, "\\hspace*{2mm}{\\bfseries Family name}:\\rule{43mm}{0.6pt}", sep="\n", append=TRUE)
+
+    cat(file=OF, " \\par\\vspace{5mm}", sep="\n", append=TRUE)
+    
+    cat(file=OF, "\\hspace*{0mm}{\\bfseries Family name}:\\rule{43mm}{0.6pt}", sep="\n", append=TRUE)
+    
     cat(file=OF, "\\hspace*{0pt}\\par\\vspace{5mm}\\noindent\\hspace*{0pt}{\\bfseries Student number}:\\rule{45mm}{0.6pt}", sep="\n", append=TRUE)
-    cat(file=OF, "\\hspace*{2mm}{\\bfseries Signature}:\\rule{60mm}{0.6pt}\\hspace*{0pt}}", sep="\n", append=TRUE)
+     cat(file=OF, " \\par\\vspace{5mm}", sep="\n", append=TRUE)
+    
+    cat(file=OF, "\\hspace*{0mm}{\\bfseries Signature}:\\rule{60mm}{0.6pt}\\hspace*{0pt}}", sep="\n", append=TRUE)
 
     cat(file=OF, "\\newcommand{\\WriteOnTest}{", sep="\n", append=TRUE)
     cat(file=OF, "\\studentinfo", sep="\n", append=TRUE)

@@ -2,7 +2,8 @@
 \alias{COMPbank}
 \title{Compare Question Banks
 }
-\description{Compare two question banks to find duplication
+\description{Compare two question banks to find non-duplicated
+  questions
 }
 \usage{
 COMPbank(Qbank1, Qbank2)
@@ -17,15 +18,17 @@ COMPbank(Qbank1, Qbank2)
 \details{Uses match to find matching questions
   in the two question banks.  
 }
-\value{Vector index of QB2 that are not
-  found in QB1.
+\value{Vector index of questions in Qbank2 that are not
+  found in Qbank1. 
 }
 
 \author{
 Jonathan M. Lees<jonathan.lees@unc.edu>
 }
 \note{Only the questions are compared,
-  the answers are ingnored.
+  the answers are ingnored.  The return vector will be
+  a set of questions that are not duplicated,
+  i.e. unique to question bank 2.
 }
 
 
@@ -55,6 +58,15 @@ Kbank = c(Kbank, kbank[[i]])
   }
 
 q2 = COMPbank(Kbank, kbank[[3]] )
+
+###########  to extract these:
+subq2 = subsetbank(kbank[[3]] , q2)
+###########  to get the overlapping questions:
+
+olap = 1:length(kbank[[3]])
+olap[-q2]
+
+
 }
 
 
