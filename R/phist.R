@@ -81,7 +81,7 @@
 
 
         den = density(Z)
-        Y = RESCALE(den$y, u[3], u[4], min(den$y), max(den$y))
+        Y = RPMG::RESCALE(den$y, u[3], u[4], min(den$y), max(den$y))
         lines(den$x, Y)
         
 
@@ -133,7 +133,7 @@ fauxgrades = G$grades
   #####   text(x, y, labels=L, col=col, xpd=TRUE, cex=.8, font=2)
   #####   text(x, y, labels=L, col=acols[scol] , xpd=TRUE, cex=.8, font=2)
 
-    textrect(x, y, L, textcol = "black", col=acols[scol])
+    RPMG::textrect(x, y, L, textcol = "black", col=acols[scol])
 
 
     

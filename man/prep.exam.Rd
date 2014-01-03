@@ -6,7 +6,8 @@
   Prepare Exam for Latex - use simple styles
 }
 \usage{
-prep.exam(OF, incfile, instructor="", examdate="", course="",  examname="", instructions="", ncol=2)
+prep.exam(OF, incfile, instructor="", examdate="",
+ course="",  examname="", instructions="", ncol=2)
 }
 
 \arguments{
@@ -59,9 +60,11 @@ examname=paste(sep=" ", exnumber, "Seq", seqnum)
 
 
 
-instructions=c("There are 50 questions.", "Answer all questions.", "Mark clearly.")
+instructions=c("There are 50 questions.",
+"Answer all questions.", "Mark clearly.")
 \dontrun{
-prep.exam(outMAST, outtex , instructor=Me, examdate=examdate, course=course, examname=examname, instructions=instructions)
+prep.exam(outMAST, outtex , instructor=Me, examdate=examdate,
+course=course, examname=examname, instructions=instructions)
 }
 
 }
