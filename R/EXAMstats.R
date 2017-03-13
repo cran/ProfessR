@@ -74,12 +74,13 @@ EXAMstats<-function(j, key)
 
     kr201 = ((QN)/(QN-1))*(1-(sum(JX)/sdscor^2))
 
-    ######   this is the Kuder–Richardson Formula 20 (KR-20)
+    ######   this is the Kuder-Richardson Formula 20 (KR-20)
     kr20 = (QN)*(1-(sum(PPS*QPS)/sdscor^2))/(QN-1)
 
     difficulty  = Correct/N
 
-###### Desc = Discrimination index = (Upper Group percent Correct) – (Lower Group percent Correct) 
+###### Desc = Discrimination index
+    ###     = (Upper Group percent Correct) - (Lower Group percent Correct) 
 
 ######  BiSer =  Biserial Correlation Coefficient is: ((PY - PX) / SX) * (Mean / Std)
 

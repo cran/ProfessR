@@ -213,7 +213,7 @@ they will want to replace the
 cover sheet with other more attractive
 options.  Originally I used
 a style sheet provided by
-the University of Texas, \emph{UOFTEXAM.sty}.
+the University of Texas, UOFTEXAM.sty.
 If the user wants to 
 use this it should be installed in the 
 proper place in
