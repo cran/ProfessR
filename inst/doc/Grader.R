@@ -16,19 +16,16 @@ divs = c(min(g), B$stats[1:4] + diff(B$stats)/2, max(g) )
 
 
 ###################################################
-### code chunk number 3: Grader.Rnw:104-111
+### code chunk number 3: Grader.Rnw:104-108
 ###################################################
-
 library(ProfessR)
 ## get(getOption("device"))(width = 12, height = 7)
-dev.new()
-
-
+##  dev.new()
 D1 = do.grades(g, divs=divs, tit="GEOL 105 Exam 1")
 
 
 ###################################################
-### code chunk number 4: Grader.Rnw:155-170
+### code chunk number 4: Grader.Rnw:152-167
 ###################################################
 
 data(E2grades)

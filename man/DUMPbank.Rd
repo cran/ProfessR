@@ -25,10 +25,14 @@ DUMPbank(ofile, QB, sep = "\n", append=TRUE)
 
 \seealso{Get.testbank}
 \examples{
+
+\dontrun{
 data(QBANK1)
 DUMPbank("my.questions", QBANK1, sep = "\n")
 
 QB1=Get.testbank("my.questions")
+}
+
 
 }
 

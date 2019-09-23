@@ -34,9 +34,10 @@ Maintainer: Jonathan M. Lees<jonathan.lees@unc.edu>
 
 ################  making tests:
 
+\dontrun{
 data(QBANK1)
 make.exam(QBANK1, ofile="exam1.tex")
-
+}
 
 
 #################  setting grades:

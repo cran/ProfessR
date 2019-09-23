@@ -23,7 +23,9 @@ prep.solution(ofile)
 
 \seealso{prep.exam}
 \examples{
+\dontrun{
 prep.solution("solfile")
+}
 }
 
 \keyword{misc}

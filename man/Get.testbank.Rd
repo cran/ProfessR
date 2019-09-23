@@ -52,8 +52,6 @@ data(QBANK1)
 DUMPbank("my.questions", QBANK1, sep = "\n")
 ###  read it in:
 QB1=Get.testbank("my.questions")
-
-
 }
 
 }
