@@ -1,4 +1,4 @@
-9a7bcf0f014d534eb9e569a874a125d5 *DESCRIPTION
+abcdbd4115b82ce270c173dca764a1de *DESCRIPTION
 0e367bc34bd248962bddcc27d1845f70 *NAMESPACE
 cf82880e30b4e36d40e777b53ac2d2fe *R/CHECKbank.R
 cc570545ec8669a56faf816a761d9934 *R/COMPbank.R
@@ -43,17 +43,17 @@ bbd2582d9162930b1f045eb0f17a5017 *R/ridNA.R
 934e73df754367e1f46b6382239d3959 *R/subsetbank.R
 151cf6b4e04ffb5e3d320e14bb0610fe *R/version.exam.R
 943faaa63c0a67048f480b06234e75a9 *R/wrist.R
-a6df805ffaebda69bf7ceb316ad1c32b *build/vignette.rds
+4895e6a0d0ce9546af0ded209fc4bb0e *build/vignette.rds
 fb0bf41789cf44d3137b2492f69d9b95 *data/E2grades.RData
 3f02d90c721c9ffde659933223117933 *data/QBANK1.RData
 baa385f3b5f8ee8633a10899a2573a21 *data/QBANK2.RData
 bb80720e45f7751170bbb4539ea7dddc *data/datalist
 176efd60f278cea795462ca937126711 *inst/doc/ExamMaker.R
 3719e6d609657fec25250fd4cc7f027b *inst/doc/ExamMaker.Rnw
-970f5eed0340708c8056ac57141d745c *inst/doc/ExamMaker.pdf
+d7a4c4a2d541ce619f2d5eef78bbd78e *inst/doc/ExamMaker.pdf
 a5e500208210f11029cc80a634bcad7a *inst/doc/Grader.R
 0e4c0156924d63b1c92b79310246ae70 *inst/doc/Grader.Rnw
-59a9900330978a863e939d0e0370dfe7 *inst/doc/Grader.pdf
+31c1e0c7bba4412415b1ed7274eb26b0 *inst/doc/Grader.pdf
 6c0af1f53d6470f64f968a90c6bcd805 *man/CHECKbank.Rd
 cf092b0edd53e6133b9d00a213ce9655 *man/COMPbank.Rd
 a7322eb0e8128f2162e9aa7a19df661d *man/DUMPbank.Rd
@@ -65,7 +65,7 @@ ff40ff62c500bae40d3337f4e81a296b *man/EXAMstats.Rd
 1f9ada0a7cff06c471b5600596bad551 *man/GetStudentNames.Rd
 2464ae0109fe2d183a343d3e1faae130 *man/IDandEM.Rd
 3a7c83b3bd826012aa69fbd015e349dc *man/LETGRADE.Rd
-4f92e39b290bee5174019a2d4c3a5f28 *man/ProfessR-package.Rd
+bd08c1d0bec2dbb2b39106d75d6759cf *man/ProfessR-package.Rd
 b2618fba82dc2f407423768a4d02359c *man/QBANK1.Rd
 701ab7dcdb4cc70071989e911ff0d576 *man/SEARCHbank.Rd
 8d9f208d3c38b179869b8fb72aa8a522 *man/SELbank.Rd
@@ -94,7 +94,7 @@ f61e56a920e97ccf96bd04cd866e24e1 *man/readSCANTRON.Rd
 7105d1e42b0701a6a9ed4fffee764f75 *man/ridNA.Rd
 f11d8c062475d5a8d8cfd27b9cf5cf86 *man/scramble.answers.Rd
 d2dfa254ad65267e222671974757cc91 *man/seebank.Rd
-aaa39b8e68e831e49c6b214dadf21414 *man/seequestions.Rd
+9e56ba5f8cc0c9b7a83600837e303bf6 *man/seequestions.Rd
 1bc530f694a24cc1d72527d753df567d *man/show.dist.Rd
 d080e7a3f4305d7dca2f9d27231a0d7a *man/subsetbank.Rd
 b64498f0bd67c326881c30ddec56b0ca *man/version.exam.Rd

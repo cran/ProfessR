@@ -11,16 +11,7 @@ Grades Setting and Exam Maker
   multiple choice exams,
   randomly shuffled, for different versions of same question list.
 }
-\details{
-\tabular{ll}{
-Package: \tab ProfessR\cr
-Type: \tab Package\cr
-Version: \tab 2.0\cr
-Date: \tab 2012-11-26\cr
-License: \tab GPL\cr
-}
 
-}
 \author{
 Jonathan M. Lees
 

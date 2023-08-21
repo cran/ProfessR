@@ -8,7 +8,7 @@
 seequestions(QB)
 }
 \arguments{
-  \item{QB}{
+  \item{QB}{Question Bank
 }
 }
 \details{Prints just the questions to the screen.
